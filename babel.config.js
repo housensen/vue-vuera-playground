@@ -1,8 +1,12 @@
 module.exports = {
   presets: [
-    '@vue/app'
+    [
+    '@vue/app',
+    {
+      jsx: false   //https://github.com/akxcv/vuera/issues/80
+    }]
   ],
   plugins: [
-    ["import", { "libraryName": "antd", "style": "css" }]
+    "@babel/transform-react-jsx"
   ]
 }
